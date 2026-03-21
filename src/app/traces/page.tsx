@@ -39,7 +39,7 @@ export default function TracesPage() {
   const [stepsLoading, setStepsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const BACKEND = "https://fraudshield-api-293460116750.us-west4.run.app";
+  const BACKEND = "https://fraudshieldai-api-293460116750.us-west4.run.app";
 
   useEffect(() => {
     fetch(`${BACKEND}/traces?limit=20`)
