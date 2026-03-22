@@ -137,6 +137,7 @@ function ChatApp() {
         <div className="header-right">
           <a href="/dashboard" style={{ color: "var(--accent-blue)", textDecoration: "none", fontSize: "12px", marginRight: "8px" }}>📊 Dashboard</a>
           <a href="/traces" style={{ color: "var(--accent-purple)", textDecoration: "none", fontSize: "12px", marginRight: "8px" }}>🔍 Traces</a>
+          <a href="/panel" style={{ color: "var(--accent-green)", textDecoration: "none", fontSize: "12px", marginRight: "8px" }}>🛡️ Panel</a>
           <span className="header-user">{session.user?.email}</span>
           <button className="header-signout" onClick={() => signOut()}>
             Cerrar sesión
