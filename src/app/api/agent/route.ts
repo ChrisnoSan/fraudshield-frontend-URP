@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET(request: Request) {
   const BACKEND_URL =
     process.env.BACKEND_URL ||
-    "https://fraudshield-api-293460116750.us-west4.run.app";
+    "https://fraudshieldai-api-293460116750.us-west4.run.app";
 
   try {
     const { searchParams } = new URL(request.url);
