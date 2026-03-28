@@ -85,9 +85,13 @@ function ChatApp() {
       const res = await fetch(
         `/api/agent?msg=${encodeURIComponent(messageText)}&idagente=${encodeURIComponent(agentId)}`
       );
-      const data = await res.json();
+   const text = await res.text();
+      console.log("RAW RESPONSE:", text);
+      const data = JSON.parse(text);
+      console.log("PARSED DATA:", data);
       const agentResponse =
         data.response || data.error || "Error: Sin respuesta del agente";
+      console.log("AGENT RESPONSE:", agentResponse);
       setMessages((prev) => [...prev, { role: "agent", content: agentResponse }]);
     } catch {
       setMessages((prev) => [
